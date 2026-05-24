@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* =======================
+   THEME COLORS
+======================= */
+
+.light {
+  background: #f5f0e6; /* beige */
+  color: #3b0a0a; /* dark maroon text */
+}
+
+.dark {
+  background: #2b0a0a; /* deep maroon */
+  color: #f5f0e6; /* beige text */
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #5a1a1a; /* maroon */
+  color: #f5f0e6;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: #f5f0e6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* =======================
+   HERO SECTION
+======================= */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0a0101;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #3b0a0a; /* light mode maroon */
+  margin: 10px 0;
+}
+
+.dark .hero h1 {
+  color: #f5f0e6; /* beige */
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  color: #5a1a1a;
+}
+
+.dark .hero p {
+  color: #f5f0e6;
+}
+
+/* =======================
+   SOCIAL LINKS
+======================= */
+
+.socials a {
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #945a5a;
+  font-weight: bold;
+}
+
+.socials a:hover {
+  color: #5a1a1a;
+}
+
+/* =======================
+   CARDS
+======================= */
+
+.card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 14px;
+  background: #fffaf3; /* soft beige white */
+  box-shadow: 0 4px 15px rgba(90, 26, 26, 0.15);
+  transition: 0.3s;
+}
+
+.dark .card {
+  background: #3b0a0a;
+}
+
+/* =======================
+   PROJECTS
+======================= */
+
+.projects {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.project-card {
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #d6b8a8;
+  background: #fffaf3;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(90, 26, 26, 0.2);
+}
+
+.dark .project-card {
+  background: #4a1212;
+  border-color: #8b2f2f;
+}
+
+/* =======================
+   FORM
+======================= */
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #c9a89a;
+  outline: none;
+  background: #fffaf3;
+}
+
+.dark input,
+.dark textarea {
+  background: #2b0a0a;
+  color: #f5f0e6;
+  border: 1px solid #8b2f2f;
+}
+
+/* =======================
+   BUTTON
+======================= */
+
+button {
+  background: #5a1a1a;
+  color: #f5f0e6;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #3b0a0a;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    margin: 15px;
+  }
+}
