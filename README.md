@@ -26,7 +26,7 @@ This is my personal portfolio website built using React.js. It showcases my skil
 - Fully responsive design (mobile & desktop)
 - Interactive project showcase section
 - Skills and about me sections
-- Contact form (if added)
+- Contact form 
 - Clean and modern UI design
 
 ---
