@@ -8,22 +8,22 @@ export default function App() {
   const projects = [
     {
       title: "Marks Calculator",
-      desc: "A simple marks calculator built using JavaScript.",
+      desc: "A simple marks calculator built using JavaScript. Using this we can calculate marks easily and the appropriate grades will be given according to the marks a person gets.",
       link: "https://bhagyavj555-del.github.io/simple-calculator",
     },
     {
       title: "Portfolio Website",
-      desc: "Professional portfolio with login system & UI design.",
-      link: "",
+      desc: "Professional portfolio with login system & glassmorphism UI. This is my first portfolio website which has a login system and can access my complete portfolio.",
+      link: "https://bhagyavj555-del.github.io/Portfolio-",
     },
   ];
 
   return (
     <div className={darkMode ? "dark" : "light"}>
-
-      {/* NAVBAR */}
+      
+      {/* ================= NAVBAR ================= */}
       <nav className="nav">
-        <h2>Bhagyalakshmi V J</h2>
+        <h2>Bhagyalakshmi</h2>
 
         <div className="nav-links">
           <a href="#home">Home</a>
@@ -33,80 +33,91 @@ export default function App() {
         </div>
 
         <button onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "☀️" : "🌙"}
+          {darkMode ? "☀️ Light" : "🌙 Dark"}
         </button>
       </nav>
 
-      {/* HERO */}
+      {/* ================= HERO ================= */}
       <section id="home" className="hero">
-        <img src={profilePic} alt="profile" className="profile-img" />
+        <img src={profilePic} alt="Profile" className="profile-img" />
 
-        <h1>Hi, I'm Bhagyalakshmi V J</h1>
-        <p>I am a passionate computer science engineering student and an aspiring Full Stack Developer. I enjoy learning new technologies and solving real world problems through code. </p>
+        <h1>Hi, I'm Bhagyalakshmi V j</h1>
+        <p>I am a passionate computer sience engineering student and an aspiring full stack developer. I enjoy learning new technologies and solving real world problems.</p>
 
         <div className="socials">
-          <a href="https://github.com/bhagyavj555-del" target="_blank">🐱 GitHub</a>
-          <a href="https://linkedin.com/in/bhagyalakshmi-v-j-846095389" target="_blank">💼 LinkedIn</a>
+          <a
+            href="https://github.com/bhagyavj555-del"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/in/bhagyalakshmi-v-j-846095389"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </section>
 
-      {/* RESUME */}
+      {/* ================= RESUME ================= */}
       <section id="resume" className="card">
         <h2>Interactive Resume</h2>
-        <p><b>Education:</b> BTech Computer Science</p>
-        <p><b>College:</b> St.Joseph's College of Engineering and Technology, Palai</p>
-        <p><b>Skills:</b> HTML, CSS, JavaScript, React</p>
-        <p><b>Goal:</b> Full Stack Developer</p>
+        <p><strong>Education:</strong>Computer science and Engineering</p>
+        <p><strong>College:</strong>St,Joseph's College of Engineering and Technology, Palai</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript, React</p>
+        <p><strong>Goal:</strong> Full Stack Developer</p>
       </section>
-      {/* PROJECTS */}
-      <div className="project-card">
-  <h3>My Portfolio Website</h3>
-  <p>A professional portfolio with login system and glassmorphism UI.</p>
 
-  <div className="project-links">
-    <a href="https://github.com/bhagyavj555-del/Portfolio-" target="_blank">
-      GitHub
-    </a>
+      {/* ================= PROJECTS ================= */}
+      <section id="projects" className="projects">
+        <h2>Projects</h2>
 
-    <a href="https://bhagyavj555-del.github.io/Portfolio-" target="_blank">
-  
-      Live Demo
-    </a>
-  </div>
-</div>
-     <div className="project-card">
-  <h3>Simple mark calculator</h3>
-  <p>A simple mark and grade calculator.</p>
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <h3>{project.title}</h3>
+            <p>{project.desc}</p>
 
-  <div className="project-links">
-    <a href="https://github.com/bhagyavj555-del/simple-calculator" target="_blank">
-      GitHub
-    </a>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🔗 View Project
+            </a>
+          </div>
+        ))}
+      </section>
 
-    <a href="https://bhagyavj555-del.github.io/simple-calculator" target="_blank">
-      Live Demo
-    </a>
-  </div>
-</div>
-
-      {/* CONTACT */}
+      {/* ================= CONTACT ================= */}
       <section id="contact" className="card">
         <h2>Contact Me</h2>
 
-        <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+        <form
+          action="https://formsubmit.co/bhagyavj555@gmail.com"
+          method="POST"
+        >
           <input type="text" name="name" placeholder="Your Name" required />
+
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
 
           <button type="submit">Send Message</button>
         </form>
       </section>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
       <footer className="footer">
-        © 2026 Bhagyalakshmi | Built with React
+        © 2026 Bhagyalakshmi | Portfolio Website
       </footer>
-
     </div>
   );
 }
