@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/professional-portfolio/"
+  base: "/FUTURE_FS_01/"
 })
